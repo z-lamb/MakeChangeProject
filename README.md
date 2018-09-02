@@ -38,13 +38,13 @@ Concatenation
 - If No is entered print out message and close the program
 - If anything else is entered it will print a message giving instructions
 - If at any point the amount being tendered is more than the amount required call changeMaker method and send array
--Declare String that will return the string of change
--Declare ints needed to calculate
--Take amounts from the array and calculate amount of change needed
--Print amount tendered, amount required, and change as converted to doubles and printed to USD format
--Use if statements to determine what denomination is needed for change
--Use if/else statements if more than 1 of a denomination can be given back to have proper plurality
--Return string back to requests method
--Print final message
--Close Program
+- Declare String that will return the string of change
+- Declare ints needed to calculate
+- Take amounts from the array and calculate amount of change needed
+- Print amount tendered, amount required, and change as converted to doubles and printed to USD format
+- Use if statements to determine what denomination is needed for change
+- Use if/else statements if more than 1 of a denomination can be given back to have proper plurality
+- Return string back to requests method
+- Print final message
+- Close Program
   
