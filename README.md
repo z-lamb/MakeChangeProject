@@ -27,24 +27,24 @@ Concatenation
 #### Overview:
 - From the main method call requests method
 - From the requests method
- - Create an array to hold the two values of amount required and amount being tendered
- - Request amount required as a double, convert to int and store in array[0] as total amount in pennies
- - Request amount being tendered as a double, convert to int and store in array[1] as total amount in pennies
- - Loop if amount tendered is equal to or less than amount required
-  - If amount being tendered is equal to amount required print out message and close program
-  - Else amount being tendered is less than amount required and ask if they would like more
-   - Use switch to accommodate different ways Yes and No can be entered
-   - If Yes is entered ask for how much more will be given and add it to array[1]
-   - If No is entered print out message and close the program
-   - If anything else is entered it will print a message giving instructions
- - If at any point the amount being tendered is more than the amount required call changeMaker method and send array
-  -Declare String that will return the string of change
-  -Declare ints needed to calculate
-  -Take amounts from the array and calculate amount of change needed
-  -Print amount tendered, amount required, and change as converted to doubles and printed to USD format
-  -Use if statements to determine what denomination is needed for change
-   -Use if/else statements if more than 1 of a denomination can be given back to have proper plurality
-  -Return string back to requests method
- -Print final message
+- Create an array to hold the two values of amount required and amount being tendered
+- Request amount required as a double, convert to int and store in array[0] as total amount in pennies
+- Request amount being tendered as a double, convert to int and store in array[1] as total amount in pennies
+- Loop if amount tendered is equal to or less than amount required
+- If amount being tendered is equal to amount required print out message and close program
+- Else amount being tendered is less than amount required and ask if they would like more
+- Use switch to accommodate different ways Yes and No can be entered
+- If Yes is entered ask for how much more will be given and add it to array[1]
+- If No is entered print out message and close the program
+- If anything else is entered it will print a message giving instructions
+- If at any point the amount being tendered is more than the amount required call changeMaker method and send array
+-Declare String that will return the string of change
+-Declare ints needed to calculate
+-Take amounts from the array and calculate amount of change needed
+-Print amount tendered, amount required, and change as converted to doubles and printed to USD format
+-Use if statements to determine what denomination is needed for change
+-Use if/else statements if more than 1 of a denomination can be given back to have proper plurality
+-Return string back to requests method
+-Print final message
 -Close Program
   
