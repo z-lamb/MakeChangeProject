@@ -3,6 +3,7 @@ package com.skilldistillery.makechange;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
+
 public class MakeChange {
 
 	public static void main(String[] args) {
@@ -17,6 +18,7 @@ public class MakeChange {
 		// requests amounts for purchase price and amount being tendered and stores it in an array
 		// an array is not the best choice for this but I opted to use it to get the practice of using an array
 		int[] requestsArr = new int[2];
+		DecimalFormat df = new DecimalFormat("#0.00");
 
 		Scanner tender = new Scanner(System.in);
 		System.out.print("Please input the total for your purchase:  $");
@@ -55,8 +57,8 @@ public class MakeChange {
 				case "n":
 				case "No":
 				case "no":
-					System.out.println("\nYou did not enter enough. We do not give our products to cherity.");
-					System.out.println("Please take your $" + ((double)requestsArr[1]/100) + " and go away!");
+					System.out.println("\nYou did not enter enough. We do not give our products to charity.");
+					System.out.println("Please take your $" + df.format((double)requestsArr[1]/100) + " and go away!");
 					tender.close();
 					return;
 				default:
@@ -80,10 +82,10 @@ public class MakeChange {
 //		which adds to the string that is being returned to print the final change
 //		the proper plural response will given if there are more than 1 denomination being given
 		String changeMaker = "";
-		int bills20, bills10, bills5, bills1, coins25, coins10, coins5, coins1;
+		int bills100, bills50, bills20, bills10, bills5, bills1, coins25, coins10, coins5, coins1;
 		int amountToChange = requestsArr[1] - requestsArr[0];
+		DecimalFormat df = new DecimalFormat("#0.00");
 
-		DecimalFormat df = new DecimalFormat("#.00");
 		System.out.println();
 		System.out.println("Amount Tendered: $" + df.format((double)requestsArr[1] / 100));
 		System.out.println("Amount Required: $" + df.format((double)requestsArr[0] / 100));
@@ -91,6 +93,21 @@ public class MakeChange {
 		System.out.println();
 		System.out.println("Your change is:");
 
+		if (amountToChange >= 10000) {
+			bills100 = amountToChange / 10000;
+			if (bills100 == 1) {
+				changeMaker = changeMaker + (bills100 + " One Hundered Dollar Bill\n");
+			}
+			else {
+				changeMaker = changeMaker + (bills100 + " One Hundered Dollar Bills\n");
+			}
+			amountToChange = amountToChange - (bills100 * 10000);
+		}	
+		if (amountToChange >= 5000) {
+			bills50 = amountToChange / 5000;
+			changeMaker = changeMaker + (bills50 + " Fifty Dollar Bill\n");
+			amountToChange = amountToChange - (bills50 * 5000);
+		}
 		if (amountToChange >= 2000) {
 			bills20 = amountToChange / 2000;
 			if (bills20 == 1) {
