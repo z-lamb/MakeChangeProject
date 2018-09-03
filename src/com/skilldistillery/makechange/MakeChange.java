@@ -15,6 +15,7 @@ public class MakeChange {
 	private static void requests() {
 
 		// requests amounts for purchase price and amount being tendered and stores it in an array
+		// an array is not the best choice for this but I opted to use it to get the practice of using an array
 		int[] requestsArr = new int[2];
 
 		Scanner tender = new Scanner(System.in);
